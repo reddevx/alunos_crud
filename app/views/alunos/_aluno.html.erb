@@ -1,0 +1,12 @@
+<h3>Aluno: <%= aluno.name %></h3>
+
+<% if action_name == 'show' %>
+  <p>Classe: <%= aluno.classe %></p>
+  <p>RM: <%= aluno.rm %></p>  
+  <%= link_to 'Back', alunos_path %>
+<% end %>
+
+<%= link_to 'Detalhes', aluno %>
+<%= link_to 'Editar', edit_aluno_path(aluno) %>
+<%= link_to 'Deletar', aluno, method: :delete, data: { turbo_method: :delete , turbo_confirm: 'Você tem certeza?' } %>
+<hr>    
